@@ -67,7 +67,7 @@ jobs:
         with:
           node-version: 18
       - name: install dependencies
-        run: npm install
+        run: npm install --no-audit --no-fund --no-optional
       - name: Lint
         run: npm run eslint
       - name: Build
@@ -81,3 +81,7 @@ Aquí como vemos estamos haciendo un checkout, seteamos node e instalamos depend
 
 ### BADGE
 Arriba de este readme podemos ver como hemos añadido el status badge generado en github, para poder de un vistazo rápido si está fallando o no los workflows seleccionados
+
+### Optimizar pipelines
+En el install hay dependencias opcionales que se están instalado y dependencias con inseguridades que no sirven, podemos optimizarlas añadiendo al npm install ->
+--no-audit --no-fund --no-optional
