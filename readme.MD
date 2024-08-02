@@ -55,17 +55,20 @@ por checkout (para traer el repo a mi máquina), hay de todo, para enviar notifi
 
 ```
 jobs:
-  ejecutar_migracion
+  ejecutar_migracion:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
-      with:
-        node-version: 18
+        with:
+          node-version: 18
       - name: install dependencies
         run: npm install
       - name: Lint
         run: npm run eslint
 ```
+
+Aquí como vemos estamos haciendo un checkout, seteamos node e instalamos dependencias para luego ejecutar el linter
+(falta poner el nombre y el evento del workflow)
