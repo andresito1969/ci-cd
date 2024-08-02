@@ -70,6 +70,10 @@ jobs:
         run: npm install
       - name: Lint
         run: npm run eslint
+      - name: Build
+        run: npm run build
+      - name: Test
+        run: npm test
 ```
 
 Aquí como vemos estamos haciendo un checkout, seteamos node e instalamos dependencias para luego ejecutar el linter
