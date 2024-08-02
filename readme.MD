@@ -45,3 +45,27 @@ jobs:
 
 
 Los pipelines son tuberías por donde pasan todos los procesos de nuestra app!
+
+Las acciones se pueden componer de otras acciones
+
+Entra el concepto de la marketplace de github actions, en el caso de querer hacer un checkout del proyecto, buscamos en la market
+por checkout (para traer el repo a mi máquina), hay de todo, para enviar notificaciones, hacer testing de movil i de web etc.
+
+
+
+```
+jobs:
+  ejecutar_migracion
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+      - uses: actions/setup-node@v4
+      with:
+        node-version: 18
+      - name: install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run eslint
+```
