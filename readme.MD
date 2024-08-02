@@ -1,3 +1,5 @@
+[![Deployment pipeline](https://github.com/andresito1969/ci-cd/actions/workflows/pipeline.yml/badge.svg)](https://github.com/andresito1969/ci-cd/actions/workflows/pipeline.yml)
+
 First commit
 ### Github actions
 (Recordar que el CI/CD puede ser con otras herramientas como jenkins)
@@ -72,3 +74,6 @@ jobs:
 
 Aquí como vemos estamos haciendo un checkout, seteamos node e instalamos dependencias para luego ejecutar el linter
 (falta poner el nombre y el evento del workflow)
+
+### BADGE
+Arriba de este readme podemos ver como hemos añadido el status badge generado en github, para poder de un vistazo rápido si está fallando o no los workflows seleccionados
