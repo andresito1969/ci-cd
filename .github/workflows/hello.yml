@@ -13,4 +13,4 @@ jobs:
         run: echo "Hola midu!"
       - name: Dime la fecha
         run: date
-      - run: ll
+      - run: ls -l
